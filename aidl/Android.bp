@@ -1,0 +1,10 @@
+aidl_interface {
+    name: "com.anlory.hawk",
+    srcs: [ "com/anlory/hawk/IHawkService.aidl", ],
+    unstable: true,
+    backend: {
+        rust: {
+            enabled: true,
+        },
+    },
+}
