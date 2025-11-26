@@ -1,23 +1,13 @@
 
-rust_library {
-    name: "libhawkservice",
-    crate_name: "hawkservice",
-    srcs: [
-        "src/lib.rs",
-    ],
-    rustlibs: [
-        "com.anlory.hawk-rust",
-    ],
-}
-
 rust_binary {
     name: "hawk",
     crate_name: "hawk",
     srcs: [
-        "src/main.rs",
+        "src/hawk.rs",
     ],
     rustlibs: [
+        "liblogger",
+        "liblog_rust",
         "com.anlory.hawk-rust",
-        "libhawkservice",
     ],
 }
