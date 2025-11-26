@@ -10,4 +10,19 @@ rust_binary {
         "liblog_rust",
         "com.anlory.hawk-rust",
     ],
+    prefer_rlib: true,
+}
+
+rust_binary {
+    name: "hawk_client",
+    crate_name: "hawk_client",
+    srcs: [
+        "src/client.rs",
+    ],
+    rustlibs: [
+        "liblogger",
+        "liblog_rust",
+        "com.anlory.hawk-rust",
+    ],
+    prefer_rlib: true,
 }
